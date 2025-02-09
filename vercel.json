@@ -1,24 +1,18 @@
 {
-    "version": 2,
-    "functions": {
-      "api/index.php": {
-        "runtime": "vercel-php@0.7.1"
-      }
-    },
-        "builds": [
-        {
-        "src": "api/index.php",
-        "use": "@vercel/php"
-        }
-    ],
-    
-    "routes": [
+  "version": 2,
+  "builds": [
       {
-        "src": "/(.*)",
-        "dest": "api/index.php"
+          "src": "api/index.php",
+          "use": "vercel-php"
       }
-    ],
-    "env": {
+  ],
+  "routes": [
+      {
+          "src": "/(.*)",
+          "dest": "api/index.php"
+      }
+  ],
+  "env": {
       "APP_ENV": "production",
       "APP_DEBUG": "true",
       "APP_URL": "https://tu-app-url.vercel.app",
@@ -28,5 +22,5 @@
       "DB_DATABASE": "portfolio",
       "DB_USERNAME": "alejandrogomcap",
       "DB_PASSWORD": "monlau2025"
-    }
   }
+}
